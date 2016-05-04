@@ -6,7 +6,8 @@ puts 'Please enter an ending year:'
 ending_year = gets.chomp
 puts ''
 
-year_range = ending_year.downto(starting_year).to_a
+year_range = [*starting_year..ending_year]
+puts year_range
 
 
 
