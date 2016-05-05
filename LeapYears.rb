@@ -6,8 +6,14 @@ puts 'Please enter an ending year:'
 ending_year = gets.chomp
 puts ''
 
-leap_year1 = [*starting_year..ending_year].delete_if { |y| y % 4 != 0 }
-puts leap_year1
+leap_years = []
+starting_year.upto(ending_year) do |y|
+  if (y % 4 == 0)
+    leap_years << y unless (y % 100 == 0) && (y % 400 != 0)
+  end
+end
+
+puts leap_years.join(', ')
 
 
 
