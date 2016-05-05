@@ -1,9 +1,9 @@
 puts ''
 puts 'Please enter a starting year:'
-starting_year = gets.chomp
+starting_year = gets.chomp.to_i
 puts ''
 puts 'Please enter an ending year:'
-ending_year = gets.chomp
+ending_year = gets.chomp.to_i
 puts ''
 
 leap_years = []
