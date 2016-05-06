@@ -1,4 +1,3 @@
-input = ''
 puts ''
 puts 'HELLO SONNY!'
 puts ''

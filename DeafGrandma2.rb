@@ -1,4 +1,3 @@
-input = ''
 data_set = []
 puts ''
 puts 'HELLO SONNY!'
