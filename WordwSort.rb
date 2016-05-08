@@ -17,12 +17,13 @@ puts ''
 puts 'Enter one random word:'
 puts ''
 
-while input = gets.chomp
+input = gets.chomp
+
+while input != "" do
+  random_words << input
   puts ''
   puts 'Enter another random word:'
   puts ''
-  random_words << input
-  if input ==''
-    puts random_words
+  input = gets.chomp
 end
-end
+  puts random_words
