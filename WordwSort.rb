@@ -26,4 +26,9 @@ while input != "" do
   puts ''
   input = gets.chomp
 end
+  puts ''
+  puts 'Your words,'
+  puts 'sorted alphabetically:'
+  puts ''
   puts random_words.sort
+  puts ''
