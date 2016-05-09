@@ -30,5 +30,5 @@ end
   puts 'Your words,'
   puts 'sorted alphabetically:'
   puts ''
-  puts random_words.sort
+  puts random_words.sort { |a, b| a.upcase <=> b.upcase }
   puts ''
