@@ -1,3 +1,8 @@
+# Create a Table of Contents
+# 'Table of Contents' should be displayed top/center
+# Chapter #/info should be listed on left
+# Page #'s should be listed on the right
+
 puts
 lineWidth = 50
 ch1 = 'Chapter 1:  Numbers'
