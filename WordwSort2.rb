@@ -21,7 +21,7 @@ puts ''
 input = gets.chomp
 
 while input != "" do
-  random_words << input
+  random_words << input.capitalize
   puts ''
   puts 'Enter another random word, or,'
   puts 'simply press the Enter key to quit:'
@@ -32,5 +32,10 @@ end
   puts 'Your words,'
   puts 'sorted alphabetically:'
   puts ''
-  puts random_words.sort { |a, b| a.upcase <=> b.upcase }
+  sorted_words = []
+    sorted_words << random_words.find_all {|a| a.chr[0] == "F"}
+    sorted_words << random_words.find_all {|a| a.chr[0] == "O"}
+    sorted_words << random_words.find_all {|a| a.chr[0] == "T"}
+    puts sorted_words
+  # puts random_words.sort { |a, b| a.upcase <=> b.upcase }
   puts ''
