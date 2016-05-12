@@ -22,7 +22,8 @@ input = gets.chomp
 while input != "" do
   random_words << input
   puts ''
-  puts 'Enter another random word:'
+  puts 'Enter another random word, or,'
+  puts 'simply press the Enter key to quit:'
   puts ''
   input = gets.chomp
 end
