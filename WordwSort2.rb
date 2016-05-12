@@ -32,10 +32,23 @@ end
   puts 'Your words,'
   puts 'sorted alphabetically:'
   puts ''
-  sorted_words = []
-    sorted_words << random_words.find_all {|a| a.chr[0] == "F"}
-    sorted_words << random_words.find_all {|a| a.chr[0] == "O"}
-    sorted_words << random_words.find_all {|a| a.chr[0] == "T"}
-    puts sorted_words
+  words_athrum = []
+  words_athrum << random_words.find_all {|a| a.chr[0] <= "M"}
+  words_athrum[0].length > 1
+  words_athrum.flatten!
+    words_athrug = []
+    words_athrug << words_athrum.find_all {|a| a.chr[0] <= "G"}
+      words_athrug[0].length > 1
+      words_athrug.flatten!
+    words_hthrum = []
+    words_hthrum << words_athrum.find_all {|a| a.chr[0] >= "H"}
+      words_hthrum[0].length > 1
+      words_hthrum.flatten!
+  
+
+
+  words_nthruz = []
+  words_nthruz << random_words.find_all {|a| a.chr[0] >= "N"}
+
   # puts random_words.sort { |a, b| a.upcase <=> b.upcase }
   puts ''
