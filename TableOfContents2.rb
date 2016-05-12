@@ -6,8 +6,5 @@
 info = ['Chapter 3:  Variables', 'page 1', 'Chapter 1:  Numbers','page 118', 'Chapter 2:  Letters', 'page 72']
 
 # create sorted_info array and sort
-sorted_info = []
-  while info.length > 0
-  sorted_info << info.delete(info.min)
-  end
-puts sorted_info
+info.sort! {|c,v| c <=> v }
+puts info
