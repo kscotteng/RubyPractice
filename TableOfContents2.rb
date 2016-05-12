@@ -3,7 +3,7 @@
 # Then print out the information from the array in a formatted Table of Contents.
 
 # create info array with all information out of order
-info = ['Chapter 3:  Variables', 'page 1', 'Chapter 1:  Numbers','page 118', 'Chapter 2:  Letters', 'page 72']
+info = ['3: Variables', '1', '1: Numbers','118', '2: Letters', '72']
 
 # create sorted_info array and sort
 info.sort! {|c,v| c <=> v }
