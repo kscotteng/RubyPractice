@@ -16,6 +16,7 @@ pages << info.find_all {|a| a.length < 4}
 pages.flatten!
 pages.map! {|i| i.to_i}
 pages.sort! {|p1,p2| p1 <=> p2}
+pages.map! {|i| i.to_s}
 # puts pages
 
 puts
