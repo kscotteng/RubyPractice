@@ -6,10 +6,16 @@
 info = ['3: Variables', '1', '1: Numbers','118', '2: Letters', '72']
 
 chapters = []
-chapters << info.find_all {|a| a.length > 3}
+chapters << info.find_all {|a| a.length > 4}
 chapters.flatten!
 chapters.sort! {|c1,c2| c1 <=> c2}
 puts chapters
+
+pages = []
+pages << info.find_all {|a| a.length < 4}
+pages.flatten!
+pages.sort! {|p1,p2| p1 <=> p2}
+puts pages
 
 # puts
 # lineWidth = 50
