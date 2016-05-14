@@ -26,3 +26,5 @@ puts
 puts 'Chapter'.ljust(lineWidth/2) + 'Page'.rjust(lineWidth/2)
 puts
 puts chapters[0].ljust(lineWidth/2) + pages[0].rjust(lineWidth/2)
+puts chapters[1].ljust(lineWidth/2) + pages[1].rjust(lineWidth/2)
+puts chapters[2].ljust(lineWidth/2) + pages[2].rjust(lineWidth/2)
