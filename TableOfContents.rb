@@ -5,12 +5,12 @@
 
 puts
 lineWidth = 50
-ch1 = 'Chapter 1:  Numbers'
-ch2 = 'Chapter 2:  Letters'
-ch3 = 'Chapter 3:  Variables'
-ch1_pgs = 'page 1'
-ch2_pgs = 'page 72'
-ch3_pgs = 'page 118'
+ch1 = '1:  Numbers'
+ch2 = '2:  Letters'
+ch3 = '3:  Variables'
+ch1_pgs = '1'
+ch2_pgs = '72'
+ch3_pgs = '118'
 puts 'Table of Contents'.center(lineWidth)
 puts
 puts 'Chapter'.ljust(lineWidth/2) + 'Page'.rjust(lineWidth/2)
