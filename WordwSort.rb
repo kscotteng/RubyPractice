@@ -5,6 +5,7 @@
 
 random_words = []
 lineWidth = 70
+system "clear"
 puts ''
 puts 'Welcome to the Random Word Sorter'.center(lineWidth)
 puts ''
@@ -24,7 +25,7 @@ puts ''
 input = gets.chomp
 
 while input != "" do
-  random_words << input
+  random_words << input.capitalize
   puts ''
   puts 'Enter another random word, or,'
   puts 'simply press the Enter key to quit:'
