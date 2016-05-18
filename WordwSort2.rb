@@ -9,12 +9,15 @@ lineWidth = 70
 puts ''
 puts 'Welcome to the Random Word Sorter'.center(lineWidth)
 puts ''
-puts 'Instructions:  Enter one (and only one) random word per line.'
-puts '               Once you have exhausted your vocabulary,'
-puts '               Simply hit the Enter key.'
+puts 'Instructions:'
+puts 'Enter one (and only one) random word per line.'
+puts 'Once you have exhausted your vocabulary,'
+puts 'Simply hit the Enter key.'
+puts ''
 puts ''
 puts 'Your extensive vocabulary will then be listed in alphabetical order.'
 
+puts ''
 puts ''
 puts 'Enter one random word:'
 puts ''
