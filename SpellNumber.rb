@@ -8,7 +8,7 @@ def spellNumber (number)
   elsif
     puts number
   end
-end
+
 
 # spellNumber(-5)
 # spellNumber(110)
@@ -26,3 +26,15 @@ spell = remaining / 100
 
 # here, we are subracting the hundreds previously mentioned
 remaining = remaining - spell * 100
+
+if spell > 0
+  return 'one hundred'
+end
+
+# this will determine how many tens remain to be converted to a string
+spell = remaining / 10
+
+# subtracting the tens calculated in the last step
+remaining = remaining - spell * 10
+
+end  
