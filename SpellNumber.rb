@@ -11,22 +11,21 @@ def spellNumber (number)
   #   puts number
   end
 
-
-  # spellNumber(-5)
-  # spellNumber(110)
-  # spellNumber(54)
-
   # number spelled out and returned as a string
   numString = ''
 
-  # 'remaining' will be the remainder of the number to be converted to a string
+  # 'remaining' is the remainder of the number to be converted to a string
   remaining = number
 
-  # 'spell' is the portion of the number currently being converted to a string
   # here, we are determining how many hundreds remain to be converted to a string
+  # 'spell' is the portion of the number currently being converted to a string
+  # (if number = 100, spell = 1; if number = 99, spell = 0)
   spell = remaining / 100
 
   # here, we are subracting the hundreds previously mentioned
+  # 'remaining' will now be the whole number remaining to convert
+  # (if number = 52, spell = 0, remaining = 52)
+  # (if number = 115, spell = 1, remaining = 15)
   remaining = remaining - spell * 100
 
   # this will determine if the number is 100
@@ -35,12 +34,59 @@ def spellNumber (number)
   end
 
   # this will determine how many tens remain to be converted to a string
+  # 'spell' will now be the number of tens
+  # (if number = 52, spell = 5)
   spell = remaining / 10
 
   # subtracting the tens calculated in the last step
+  # (if number = 52, remaining = 2)
   remaining = remaining - spell * 10
 
+  # determining if we have a number greater than ten (number is a range ten - ninety nine)
   if spell > 0
 
+    # number is greater than ten but, is a range of ten - nineteen (single output for both tens and ones)
+    # this range does not have two outputs like twenty - ninety (one output for tens, one output for ones)
+    if spell == 1
+
+      if remaining == 0
+        numString = numString + 'ten'
+      elsif remaining == 1
+        numString = numString + 'eleven'
+      elsif remaining == 2
+        numString = numString + 'twelve'
+      elsif remaining == 3
+        numString = numString + 'thirteen'
+      elsif remaining == 4
+        numString = numString + 'fourteen'
+      elsif remaining == 5
+        numString = numString + 'fifteen'
+      elsif remaining == 6
+        numString = numString + 'sixteen'
+      elsif remaining == 7
+        numString = numString + 'seventeen'
+      elsif remaining == 8
+        numString = numString + 'eighteen'
+      elsif remaining == 9
+        numString = numString + 'nineteen'
+      end
+
+
+
+    end
+  end
 
 end
+
+puts spellNumber(0)
+puts spellNumber(100)
+puts spellNumber(10)
+puts spellNumber(11)
+puts spellNumber(12)
+puts spellNumber(13)
+puts spellNumber(14)
+puts spellNumber(15)
+puts spellNumber(16)
+puts spellNumber(17)
+puts spellNumber(18)
+puts spellNumber(19)
