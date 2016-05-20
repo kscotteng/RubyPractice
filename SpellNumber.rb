@@ -71,8 +71,8 @@ def spellNumber (number)
         numString = numString + 'nineteen'
       end
 
-      # noting remaining to write out since we just ran through the ten - nineteen range
-      # (there is nothing remaining in the ones place)
+      # nothing remaining to write out since we just ran through the ten - nineteen range
+      # zeroing 'remaining'
       remaining = 0
     elsif spell == 2
       numString = numString + 'twenty'
@@ -92,11 +92,38 @@ def spellNumber (number)
       numString = numString + 'ninety'
     end
 
-
+    if remaining > 0
+      numString = numString + '-'
+    end
   end
 
-end
+  # setting remaining ones to 'spell'
+  spell = remaining
+  # zeroing 'remaining'
+  remaining = 0
 
+  if spell > 0
+    if spell == 1
+      numString = numString + 'one'
+    elsif spell == 2
+      numString = numString + 'two'
+    elsif spell == 3
+      numString = numString + 'three'
+    elsif spell == 4
+      numString = numString + 'four'
+    elsif spell == 5
+      numString = numString + 'five'
+    elsif spell == 6
+      numString = numString + 'six'
+    elsif spell == 7
+      numString = numString + 'seven'
+    elsif spell == 8
+      numString = numString + 'eight'
+    elsif spell == 9
+      numString = numString + 'nine'
+    end
+  end
+end
 puts spellNumber(0)
 puts spellNumber(100)
 puts spellNumber(10)
@@ -109,4 +136,12 @@ puts spellNumber(16)
 puts spellNumber(17)
 puts spellNumber(18)
 puts spellNumber(19)
-puts spellNumber(25)
+puts spellNumber(21)
+puts spellNumber(32)
+puts spellNumber(43)
+puts spellNumber(54)
+puts spellNumber(65)
+puts spellNumber(76)
+puts spellNumber(87)
+puts spellNumber(98)
+puts spellNumber(99)
