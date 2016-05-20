@@ -123,7 +123,16 @@ def spellNumber (number)
       numString = numString + 'nine'
     end
   end
+
+  # this takes care of the number zero
+  # the only way 'numString' could be empty is if the number is zero
+  if numString == ''
+    return 'zero'
+  end
+
+  numString
 end
+
 puts spellNumber(0)
 puts spellNumber(100)
 puts spellNumber(10)
