@@ -1,14 +1,10 @@
 # this program will take a number from 0 - 100 and spell it out
 
 def spellNumber (number)
-  # number has to be at least zero
-  if number < 0
-    puts 'Please enter a number greater than 0'
-  # can not be greater than 100
-  elsif number > 100
-    puts 'Please enter a number less than 100'
-  # elsif
-  #   puts number
+
+  # number has to be at least zero and can not be greater than 100
+  if number < 0 || number > 100
+    return 'Please enter a number between 0 and 100'
   end
 
   # number spelled out and returned as a string
@@ -133,24 +129,24 @@ def spellNumber (number)
   numString
 end
 
-# puts spellNumber(0)
-# puts spellNumber(100)
-# puts spellNumber(10)
-# puts spellNumber(11)
-# puts spellNumber(12)
-# puts spellNumber(13)
-# puts spellNumber(14)
-# puts spellNumber(15)
-# puts spellNumber(16)
-# puts spellNumber(17)
-# puts spellNumber(18)
-# puts spellNumber(19)
-# puts spellNumber(21)
-# puts spellNumber(32)
-# puts spellNumber(43)
-# puts spellNumber(54)
-# puts spellNumber(65)
-# puts spellNumber(76)
-# puts spellNumber(87)
-# puts spellNumber(98)
-# puts spellNumber(99)
+puts spellNumber(0)
+puts spellNumber(100)
+puts spellNumber(10)
+puts spellNumber(11)
+puts spellNumber(12)
+puts spellNumber(13)
+puts spellNumber(14)
+puts spellNumber(15)
+puts spellNumber(16)
+puts spellNumber(17)
+puts spellNumber(18)
+puts spellNumber(19)
+puts spellNumber(21)
+puts spellNumber(32)
+puts spellNumber(43)
+puts spellNumber(54)
+puts spellNumber(65)
+puts spellNumber(76)
+puts spellNumber(87)
+puts spellNumber(98)
+puts spellNumber(99)
