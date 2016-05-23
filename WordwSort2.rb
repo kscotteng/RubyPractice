@@ -6,6 +6,7 @@
 
 random_words = []
 lineWidth = 70
+system "clear"
 puts ''
 puts 'Welcome to the Random Word Sorter'.center(lineWidth)
 puts ''
