@@ -17,6 +17,8 @@ puts 20./(2)
 puts 2 ** 3
 puts 2.**(3)
 
+# the '=' is an actual operator, we are assigning a variable in this case
+# this is not a method on an object, because a variable is not an object
 array1 = [1,2,3]
 puts array1.inspect
 array2 = [1,2,3]
