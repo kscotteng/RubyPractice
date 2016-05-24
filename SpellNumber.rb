@@ -10,6 +10,12 @@ def spellNumber (number)
   # number spelled out and returned as a string
   numString = ''
 
+  ones = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
+
+  tens = ['ten', 'twenty', 'thirty', 'fourty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+
+  teens = ['eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
+
   # 'remaining' is the remainder of the number to be converted to a string
   remaining = number
 
