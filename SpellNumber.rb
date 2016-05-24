@@ -1,6 +1,6 @@
 # this program will take a number from 0 - 100 and spell it out
 
-def spellNumber (number)
+def spellNumber(number)
 
   # number has to be at least zero and can not be greater than 100
   if number < 0 || number > 100
@@ -32,8 +32,19 @@ def spellNumber (number)
 
   # this will determine if the number is 100
   if spell > 0
-    return 'one hundred'
-  end
+
+    #recursion
+    # instructing method to call itself with 'spell'
+    # 'spell' is currently the number of hundreds
+    hundreds = spellNumber(spell)
+
+    # adding the hundreds value to numString
+    # adding ' hundred' after the hundreds place
+    numString = numString + hundreds + ' hundred'
+
+  # old code:
+  #   return 'one hundred'
+  # end
 
   # this will determine how many tens remain to be converted to a string
   # 'spell' will now be the number of tens
