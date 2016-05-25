@@ -1,4 +1,4 @@
-bottles = 99
+bottles = 1000000
 
 while bottles > 1
   puts ''
@@ -18,5 +18,3 @@ while bottles > 1
     puts ''
   end
 end
-
-  
