@@ -42,9 +42,12 @@ def spellNumber(number)
     # adding ' hundred' after the hundreds place
     numString = numString + hundreds + ' hundred'
 
-  # old code:
-  #   return 'one hundred'
-  # end
+    if remaining > 0
+      # this adds a space between the hundreds place and any remainig values
+      # so we don't write one hundredtwenty-two
+      numString = numString + ' '
+    end
+  end
 
   # this will determine how many tens remain to be converted to a string
   # 'spell' will now be the number of tens
@@ -60,49 +63,16 @@ def spellNumber(number)
 
     # number is greater than ten but, is a range of ten - nineteen (single output for both tens and ones)
     # this range does not have two outputs like twenty - ninety (one output for tens, one output for ones)
-    if spell == 1
+    if spell == 1 && remaining > 0
 
-      if remaining == 0
-        numString = numString + 'ten'
-      elsif remaining == 1
-        numString = numString + 'eleven'
-      elsif remaining == 2
-        numString = numString + 'twelve'
-      elsif remaining == 3
-        numString = numString + 'thirteen'
-      elsif remaining == 4
-        numString = numString + 'fourteen'
-      elsif remaining == 5
-        numString = numString + 'fifteen'
-      elsif remaining == 6
-        numString = numString + 'sixteen'
-      elsif remaining == 7
-        numString = numString + 'seventeen'
-      elsif remaining == 8
-        numString = numString + 'eighteen'
-      elsif remaining == 9
-        numString = numString + 'nineteen'
-      end
+        # -1 is to locate the correct position in the array for the value entered
+        numString = numString + teens[remaining-1]
 
-      # nothing remaining to write out since we just ran through the ten - nineteen range
-      # zeroing 'remaining'
-      remaining = 0
-    elsif spell == 2
-      numString = numString + 'twenty'
-    elsif spell == 3
-      numString = numString + 'thirty'
-    elsif spell == 4
-      numString = numString + 'forty'
-    elsif spell == 5
-      numString = numString + 'fifty'
-    elsif spell == 6
-      numString = numString + 'sixty'
-    elsif spell == 7
-      numString = numString + 'seventy'
-    elsif spell == 8
-      numString = numString + 'eighty'
-    elsif spell == 9
-      numString = numString + 'ninety'
+        # nothing remaining to write out since we just ran through the ten - nineteen range
+        # zeroing 'remaining'
+        remaining = 0
+    else
+      numString = numString + tens[spell-1]
     end
 
     if remaining > 0
@@ -116,29 +86,9 @@ def spellNumber(number)
   remaining = 0
 
   if spell > 0
-    if spell == 1
-      numString = numString + 'one'
-    elsif spell == 2
-      numString = numString + 'two'
-    elsif spell == 3
-      numString = numString + 'three'
-    elsif spell == 4
-      numString = numString + 'four'
-    elsif spell == 5
-      numString = numString + 'five'
-    elsif spell == 6
-      numString = numString + 'six'
-    elsif spell == 7
-      numString = numString + 'seven'
-    elsif spell == 8
-      numString = numString + 'eight'
-    elsif spell == 9
-      numString = numString + 'nine'
-    end
+    numString = numString + ones[spell-1]
   end
 
-  # this takes care of the number zero
-  # the only way 'numString' could be empty is if the number is zero
   if numString == ''
     return 'zero'
   end
@@ -146,8 +96,9 @@ def spellNumber(number)
   numString
 end
 
+# puts spellNumber(-1)
 # puts spellNumber(0)
-# puts spellNumber(100)
+# puts spellNumber(5)
 # puts spellNumber(10)
 # puts spellNumber(11)
 # puts spellNumber(12)
@@ -167,3 +118,5 @@ end
 # puts spellNumber(87)
 # puts spellNumber(98)
 # puts spellNumber(99)
+# puts spellNumber(100)
+# puts spellNumber(101)
