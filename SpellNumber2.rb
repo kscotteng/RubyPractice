@@ -19,13 +19,18 @@ def spellNumber (number)
 
   # here, we are subracting the thousands previously mentioned
   # 'remaining' will now be the whole number remaining to convert
-  # (if number = 640, spell = 0, remaining = 64)
-  # (if number = 1220, spell = 1, remaining = 22)
+  # (if number = 640, spell = 0, remaining = 640)
+  # (if number = 1220, spell = 1, remaining = 220)
   remaining = remaining - spell * 1000
 
   # this will determine if the number is 1000
   if spell > 0
-    return 'one thousand'
+    thousands = spellNumber(spell)
+    numString = numString + thousands + ' thousand'
+    if remaining > 0
+      numString = numString + ' '
+    end
   end
 
+  numString
 end
