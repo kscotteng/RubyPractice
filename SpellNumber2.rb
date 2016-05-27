@@ -30,8 +30,29 @@ def spellNumber (number)
 
   # this will determine if the number is 1000
   if spell > 0
+
+    # recursion for 1000 place
     thousands = spellNumber(spell)
     numString = numString + thousands + ' thousand'
+
+    # this will add a space if needed
+    if remaining > 0
+      numString = numString + ' '
+    end
+  end
+
+  #basically a repeat from above without resetting remaining to number
+  spell = remaining / 100
+  remaining = remaining - spell * 100
+
+  # determine if number is 100 place
+  if spell > 0
+
+    # recursion for 100 place
+    hundreds = spellNumber(spell)
+    numString = numString + hundreds + ' hundred'
+
+    # this will add a space if needed
     if remaining > 0
       numString = numString + ' '
     end
