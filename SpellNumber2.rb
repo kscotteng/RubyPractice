@@ -28,7 +28,7 @@ def spellNumber (number)
   # (if number = 1220, spell = 1, remaining = 220)
   remaining = remaining - spell * 1000
 
-  # this will determine if the number is 1000
+  # if number is >=1000
   if spell > 0
 
     # recursion for 1000 place
@@ -41,11 +41,11 @@ def spellNumber (number)
     end
   end
 
-  #basically a repeat from above without resetting remaining to number
+  # this will determine if the number is >=100
   spell = remaining / 100
   remaining = remaining - spell * 100
 
-  # determine if number is 100 place
+  # if number is >=100
   if spell > 0
 
     # recursion for 100 place
@@ -57,6 +57,33 @@ def spellNumber (number)
       numString = numString + ' '
     end
   end
+
+  # this will determine if the number is >=10
+  spell = remaining / 10
+  remaining = remaining - spell * 10
+
+  # if number is >=10
+  if spell > 0
+
+    # if number is in the teens
+    if spell == 1 && remaining > 0
+      # spelling number in teens place
+      numString = numString + teens[remaining -1]
+      # resetting remaining to zero, if teens are output
+      remaining = 0
+    else
+      # if number is in the tens
+      numString = numString + tens[spell -1]
+    end
+
+    if remaining > 0
+      # placing '-' between tens and ones
+      numString = numString + '-'
+    end
+  end
+
+  
+
 
   numString
 end
