@@ -72,7 +72,7 @@ def spellNumber (number)
       # resetting remaining to zero, if teens are output
       remaining = 0
     else
-      # if number is in the tens
+      # spelling number in the tens place
       numString = numString + tens[spell -1]
     end
 
@@ -82,8 +82,19 @@ def spellNumber (number)
     end
   end
 
-  
+  # moving remainig ones to spell
+  spell = remaining
+  # zeroing remaining variable
+  remaining = 0
 
+  if spell > 0
+    # spelling number in ones place
+    numString = numString + ones[spell -1]
+  end
+
+  if numString == ''
+    return 'zero'
+  end
 
   numString
 end
