@@ -3,8 +3,8 @@
 def spellNumber (number)
 
   # number has to be at least zero and can not be greater than 10000
-  if number < 0 || number > 10000
-    return 'Please enter a number between 0 and 10000'
+  if number < 0 || number > 1000000
+    return 'Please enter a number between 0 and 1000000'
   end
 
   # creates an empty string
@@ -121,3 +121,4 @@ puts spellNumber(2018)
 puts spellNumber(8013)
 puts spellNumber(9999)
 puts spellNumber(10000)
+puts spellNumber(1000000)
