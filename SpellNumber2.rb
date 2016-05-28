@@ -3,7 +3,7 @@
 def spellNumber (number)
 
   # number has to be at least zero and can not be greater than 10000
-  if number < 0 || number >= 10000
+  if number < 0 || number > 10000
     return 'Please enter a number between 0 and 10000'
   end
 
@@ -98,3 +98,26 @@ def spellNumber (number)
 
   numString
 end
+
+puts spellNumber(-1)
+puts spellNumber(0)
+puts spellNumber(7)
+puts spellNumber(10)
+puts spellNumber(12)
+puts spellNumber(15)
+puts spellNumber(20)
+puts spellNumber(22)
+puts spellNumber(72)
+puts spellNumber(100)
+puts spellNumber(104)
+puts spellNumber(118)
+puts spellNumber(135)
+puts spellNumber(255)
+puts spellNumber(342)
+puts spellNumber(999)
+puts spellNumber(1000)
+puts spellNumber(1415)
+puts spellNumber(2018)
+puts spellNumber(8013)
+puts spellNumber(9999)
+puts spellNumber(10000)
