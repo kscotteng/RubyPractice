@@ -3,7 +3,7 @@
 def spellNumber (number)
 
   # number has to be at least zero and can not be greater than 1000000
-  if number < 0 || number > 9999999
+  if number < 0 || number > 1000000000
     return 'Please enter a number between 0 and 1000000'
   end
 
@@ -137,3 +137,5 @@ puts spellNumber(999999)
 puts spellNumber(1000000)
 puts spellNumber(1515297)
 puts spellNumber(9999999)
+puts spellNumber(999999999)
+puts spellNumber(1000000000)
