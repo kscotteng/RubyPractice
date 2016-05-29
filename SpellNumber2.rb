@@ -3,7 +3,7 @@
 def spellNumber (number)
 
   # number has to be at least zero and can not be greater than 1000000
-  if number < 0 || number > 1000000000
+  if number < 0 || number >= 1000000000000
     return 'Please enter a number between 0 and 1000000'
   end
 
@@ -16,6 +16,23 @@ def spellNumber (number)
 
   # 'remaining' is the remainder of the number to be converted to a string
   remaining = number
+
+  # this will determine if the number is >=1000000000
+  spell = remaining / 1000000000
+  remaining = remaining - spell * 1000000000
+
+  # if number is >=1000000000
+  if spell > 0
+
+    # recursion for 1000000000 place
+    billions = spellNumber(spell)
+    numString = numString + billions + ' billion'
+
+    # this will add a space if needed
+    if remaining > 0
+      numString = numString + ' '
+    end
+  end
 
   # this will determine if the number is >=1000000
   spell = remaining / 1000000
@@ -139,3 +156,5 @@ puts spellNumber(1515297)
 puts spellNumber(9999999)
 puts spellNumber(999999999)
 puts spellNumber(1000000000)
+puts spellNumber(11212313414)
+puts spellNumber(999999999999)
