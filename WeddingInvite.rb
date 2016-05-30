@@ -27,4 +27,14 @@ def weddingYear(year)
     end
   end
 
+  spell = remaining / 100
+  remaining = remaining - spell * 100
+
+  if spell > 0
+    hundreds = weddingYear(spell)
+    numString = numString + hundreds + ' hundred'
+    if remaining > 0
+      numString = numString + ' '
+    end
+  end
   
