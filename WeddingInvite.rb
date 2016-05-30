@@ -37,4 +37,19 @@ def weddingYear(year)
       numString = numString + ' '
     end
   end
+
+  spell = remaining / 10
+  remaining = remaining - spell * 10
+  if spell > 0
+    if spell == 1 && remaining > 0
+      numString = numString + teens[remaining - 1]
+      remaining = 0
+    else
+      numString = numString + tens[spell - 1]
+    end
+    if remaining > 0
+      numString = numString + '-'
+    end
+  end
+
   
