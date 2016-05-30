@@ -5,8 +5,8 @@ year = gets.chomp.to_i
 
 def weddingYear(year)
 
-  if year < 2016 || year > 9999
-    return 'Please enter a year 2016 or later'
+  if year < 0 || year > 9999
+    return 'Please enter a valid year'
   end
 
   numString = ''
@@ -52,4 +52,13 @@ def weddingYear(year)
     end
   end
 
-  
+  spell = remaining
+  remaining = 0
+  if spell > 0
+    numString = numString + ones[spell - 1]
+  end
+
+  numString
+end
+
+puts weddingYear(year)
