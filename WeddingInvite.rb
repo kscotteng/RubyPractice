@@ -6,6 +6,23 @@ year = gets.chomp.to_i
 puts "What month will you be getting married?"
 month = gets.chomp
 
+puts "What day of the month will you be getting married?"
+day = gets.chomp.to_i
+
+def weddingDay(day)
+
+  numString = ''
+
+  days = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth', 'twentieth', 'twenty-first', 'twenty-second', 'twenty-third', 'twenty-fourth', 'twenty-fifth', 'twenty-sixth', 'twenty-seventh', 'twenty-eighth', 'twenty-ninth', 'thirtieth', 'thirty-first']
+
+  numString = numString + days[day-1]
+
+  numString
+
+end
+
+end
+
 def weddingYear(year)
 
   if year < 0 || year > 9999
