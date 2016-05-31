@@ -3,6 +3,9 @@
 puts "What year will you be getting married?"
 year = gets.chomp.to_i
 
+puts "What month will you be getting married?"
+month = gets.chomp
+
 def weddingYear(year)
 
   if year < 0 || year > 9999
