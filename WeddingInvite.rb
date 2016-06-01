@@ -1,13 +1,13 @@
 # This program will output formal wedding invitation wording
 system "clear"
-puts "What year will you be getting married?"
-year = gets.chomp.to_i
 
-puts "What month will you be getting married?"
-month = gets.chomp
-
-puts "What day of the month will you be getting married?"
-day = gets.chomp.to_i
+puts "What is the Month, Day and Year of the wedding?"
+puts "(ex: November 3 2007)"
+date = gets.chomp
+wedding_date = date.split(' ')
+year = wedding_date.pop.to_i
+day = wedding_date.pop.to_i
+month = wedding_date.pop
 
 def weddingDay(day)
 
