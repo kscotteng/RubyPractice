@@ -21,8 +21,6 @@ def weddingDay(day)
 
 end
 
-end
-
 def weddingYear(year)
 
   if year < 0 || year > 9999
@@ -81,4 +79,7 @@ def weddingYear(year)
   numString
 end
 
+system "clear"
 puts weddingYear(year)
+puts month
+puts weddingDay(day)
