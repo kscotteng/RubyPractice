@@ -1,5 +1,5 @@
 # This program will output formal wedding invitation wording
-
+system "clear"
 puts "What year will you be getting married?"
 year = gets.chomp.to_i
 
@@ -80,6 +80,9 @@ def weddingYear(year)
 end
 
 system "clear"
-puts weddingYear(year)
-puts month
-puts weddingDay(day)
+# puts weddingYear(year)
+# puts month
+# puts weddingDay(day)
+puts month + ' ' + weddingDay(day) + ', ' + weddingYear(year)
+puts ''
+puts ''
