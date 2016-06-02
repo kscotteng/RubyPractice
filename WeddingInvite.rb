@@ -9,6 +9,9 @@ year = wedding_date.pop.to_i
 day = wedding_date.pop.to_i
 month = wedding_date.pop
 
+puts "What day of the week is the wedding?"
+day_of_week = gets.chomp
+
 def weddingDay(day)
 
   numString = ''
@@ -86,3 +89,4 @@ system "clear"
 puts month + ' ' + weddingDay(day) + ', ' + weddingYear(year)
 puts ''
 puts ''
+puts day_of_week
