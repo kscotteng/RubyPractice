@@ -86,7 +86,7 @@ system "clear"
 # puts weddingYear(year)
 # puts month
 # puts weddingDay(day)
-puts month + ' ' + weddingDay(day) + ', ' + weddingYear(year)
-puts ''
-puts ''
 puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
+puts '[' + weddingYear(year) + ']'
+puts ''
+puts ''
