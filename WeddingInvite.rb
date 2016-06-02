@@ -89,4 +89,4 @@ system "clear"
 puts month + ' ' + weddingDay(day) + ', ' + weddingYear(year)
 puts ''
 puts ''
-puts day_of_week
+puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
