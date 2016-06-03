@@ -18,6 +18,10 @@ time = gets.chomp
 
 def weddingTime(time)
 
+  wedding_time = time.split(':')
+  min = wedding.time.pop.to_i
+  hour = wedding.time.pop.to_i
+  
 end
 
 def weddingDay(day)
