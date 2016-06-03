@@ -19,8 +19,8 @@ time = gets.chomp
 def weddingTime(time)
 
   wedding_time = time.split(':')
-  min = wedding.time.pop.to_i
-  hour = wedding.time.pop.to_i
+  min = wedding_time.pop.to_i
+  hour = wedding_time.pop.to_i
 
   numString = ''
 
@@ -30,7 +30,7 @@ def weddingTime(time)
     mins = 'half after '
     numString = numString + mins + hours[hour-1]
   else
-    numString = numString + hours[hours-1]
+    numString = numString + hours[hour-1]
   end
 
   numString
@@ -113,6 +113,6 @@ system "clear"
 # puts weddingDay(day)
 puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
 puts '[' + weddingYear(year) + ']'
-puts 'at ' + weddingTime(time) + ' o\'clock'
+puts 'at ' + weddingTime(time) + " o'clock"
 puts ''
 puts ''
