@@ -26,7 +26,14 @@ def weddingTime(time)
 
   hours = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
 
-  
+  if min > 0
+    mins = 'half after '
+    numString = numString + mins + hours[hour-1]
+  else
+    numString = numString + hours[hours-1]
+  end
+
+  numString
 
 end
 
