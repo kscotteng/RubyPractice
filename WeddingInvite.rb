@@ -12,6 +12,14 @@ month = wedding_date.pop
 puts "What day of the week is the wedding?"
 day_of_week = gets.chomp
 
+puts "What time is the wedding?"
+puts "(enter time on the hour or half-hour - hh:mm)"
+time = gets.chomp
+
+def weddingTime(time)
+
+end
+
 def weddingDay(day)
 
   numString = ''
