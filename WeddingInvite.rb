@@ -21,7 +21,13 @@ def weddingTime(time)
   wedding_time = time.split(':')
   min = wedding.time.pop.to_i
   hour = wedding.time.pop.to_i
+
+  numString = ''
+
+  hours = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+
   
+
 end
 
 def weddingDay(day)
