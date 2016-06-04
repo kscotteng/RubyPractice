@@ -4,6 +4,9 @@ system "clear"
 puts "What is the name of the Bride?"
 bride = gets.chomp
 
+puts "What is the name of the Groom?"
+groom = gets.chomp
+
 puts "What is the Month, Day and Year of the wedding?"
 puts "(ex: November 3 2007)"
 date = gets.chomp
