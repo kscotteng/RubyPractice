@@ -120,6 +120,9 @@ system "clear"
 puts "Mr. & Mrs. " + father_of_bride
 puts "request the honour of your presence"
 puts "at the marriage of their daughter"
+puts bride
+puts "to"
+puts "Mr. " + groom
 puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
 puts '[' + weddingYear(year) + ']'
 puts 'at ' + weddingTime(time) + " o'clock"
