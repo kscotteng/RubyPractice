@@ -8,7 +8,7 @@ puts "What is the name of the Groom?"
 groom = gets.chomp
 
 puts "What is the name of the Bride's Father?"
-father_of_bride
+father_of_bride = gets.chomp
 
 puts "What is the Month, Day and Year of the wedding?"
 puts "(ex: November 3 2007)"
@@ -117,9 +117,7 @@ def weddingYear(year)
 end
 
 system "clear"
-# puts weddingYear(year)
-# puts month
-# puts weddingDay(day)
+puts "Mr. & Mrs. " + father_of_bride
 puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
 puts '[' + weddingYear(year) + ']'
 puts 'at ' + weddingTime(time) + " o'clock"
