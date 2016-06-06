@@ -25,6 +25,11 @@ puts "What time is the wedding?"
 puts "(enter time on the hour or half-hour - hh:mm)"
 time = gets.chomp
 
+puts "What is the name of the ceremony venue?"
+ceremony_venue = gets.chomp
+
+
+
 def weddingTime(time)
 
   wedding_time = time.split(':')
