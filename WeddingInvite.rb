@@ -31,6 +31,9 @@ ceremony_venue = gets.chomp
 puts "City, State of ceremony venue?"
 ceremony_location = gets.chomp
 
+puts "What is the name of the reception venue?"
+reception_venue = gets.chomp
+
 
 def weddingTime(time)
 
