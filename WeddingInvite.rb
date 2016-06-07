@@ -142,5 +142,6 @@ puts 'at ' + weddingTime(time) + " o'clock"
 puts ceremony_venue
 puts ceremony_location
 puts reception_venue
+puts reception_location
 puts ''
 puts ''
