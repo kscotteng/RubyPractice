@@ -139,5 +139,6 @@ puts "Mr. " + groom
 puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
 puts '[' + weddingYear(year) + ']'
 puts 'at ' + weddingTime(time) + " o'clock"
+puts ceremony_venue
 puts ''
 puts ''
