@@ -9,6 +9,10 @@
 # generating a random number (random.new) and give it an argument, ex.(5), for the max value of the random number
 
 random_number = Random.new.rand(5)
+loop do
+  print "Guess a number between 0 and 5  (press 'x' to exit): "
+  guess = gets.chomp
+
 
 
 
