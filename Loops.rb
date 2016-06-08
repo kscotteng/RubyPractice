@@ -15,7 +15,16 @@ loop do
   if answer == "x"
     puts "The number was #{random_number}."
     break
+  else
+    if answer.to_i == random_number
+      puts "You guessed correctly!"
+      break
+    else
+      puts "Try again."
+    end
   end
+end
+
 
 
 
