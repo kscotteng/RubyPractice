@@ -130,18 +130,18 @@ def weddingYear(year)
 end
 
 system "clear"
-puts "Mr. & Mrs. " + father_of_bride
-puts "request the honour of your presence"
-puts "at the marriage of their daughter"
-puts bride
-puts "to"
-puts "Mr. " + groom
-puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month
-puts '[' + weddingYear(year) + ']'
-puts 'at ' + weddingTime(time) + " o'clock"
-puts ceremony_venue
-puts ceremony_location
-puts reception_venue
-puts reception_location
+puts "Mr. & Mrs. " + father_of_bride.center(75)
+puts "request the honour of your presence".center(75)
+puts "at the marriage of their daughter".center(75)
+puts bride.center(75)
+puts "to".center(75)
+puts "Mr. " + groom.center(75)
+puts day_of_week + ', the ' + weddingDay(day) + ' of ' + month.center(75)
+puts '[' + weddingYear(year) + ']'.center(75)
+puts 'at ' + weddingTime(time) + " o'clock".center(75)
+puts ceremony_venue.center(75)
+puts ceremony_location.center(75)
+puts reception_venue.center(75)
+puts reception_location.center(75)
 puts ''
 puts ''
